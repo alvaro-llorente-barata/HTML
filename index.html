@@ -1,105 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bacalaos FC</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, Helvetica, sans-serif; background: #fff; color: #111; }
-
-    header {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 0 18px; height: 54px;
-      border-top: 4px solid #fbf3e3; border-bottom: 1px solid #ddd;
-    }
-    .logo { font-weight: bold; font-size: 16px; letter-spacing: 1.5px; }
-    nav a { margin-left: 22px; text-decoration: none; color: #111; font-size: 13px; }
-    nav a:hover { text-decoration: underline; }
-
-    main { max-width: 850px; margin: 0 auto; padding: 50px 20px 60px; }
-    h1 { font-size: 46px; margin-bottom: 40px; }
-    h2 { font-size: 22px; margin-bottom: 20px; }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    .card {
-      display: block; text-decoration: none; color: inherit;
-      border: 1px solid #ddd; border-radius: 10px; padding: 12px;
-    }
-    .card img {
-      width: 100%; height: 208px; object-fit: contain;
-      background: #f3f3f3; border-radius: 6px; margin-bottom: 12px;
-    }
-    .marca { font-size: 10px; color: #666; }
-    .nombre { font-weight: bold; font-size: 14px; margin: 3px 0; }
-    .precio { font-size: 13px; }
-
-    @media (max-width: 700px) {
-      .grid { grid-template-columns: repeat(2, 1fr); }
-      h1 { font-size: 36px; }
-    }
-    @media (max-width: 450px) {
-      .grid { grid-template-columns: 1fr; }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <div class="logo">BACALAOS FC</div>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="tienda.html">Tienda</a>
-      <a href="contacto.html">Contacto</a>
-    </nav>
-  </header>
-
-  <main>
-    <h1>Bacalaos FC</h1>
-    <h2>Productos</h2>
-    <div class="grid">
-      <a class="card" href="tienda.html">
-        <img src="Camiseta1.jpg.jpeg" alt="Camiseta Local">
-        <div class="marca">BACALAOS FC</div>
-        <div class="nombre">Camiseta Local</div>
-        <div class="precio">49,99 €</div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bacalaos FC</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="site.css">
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="index.html">
+        <img src="images/logo.png" alt=""> <span>Bacalaos FC</span>
       </a>
-      <a class="card" href="tienda.html">
-        <img src="Camiseta2.jpeg" alt="Camiseta Visitante">
-        <div class="marca">BACALAOS FC</div>
-        <div class="nombre">Camiseta Visitante</div>
-        <div class="precio">49,99 €</div>
-      </a>
-      <a class="card" href="tienda.html">
-        <img src="Chaqueta.png" alt="Chaqueta">
-        <div class="marca">BACALAOS FC</div>
-        <div class="nombre">Chaqueta</div>
-        <div class="precio">59,99 €</div>
-      </a>
-      <a class="card" href="tienda.html">
-        <img src="PantalonLargo.png" alt="Pantalón largo">
-        <div class="marca">BACALAOS FC</div>
-        <div class="nombre">Pantalón largo</div>
-        <div class="precio">39,99 €</div>
-      </a>
-      <a class="card" href="tienda.html">
-        <img src="Corto1.png" alt="Pantalón Local">
-        <div class="marca">BACALAOS FC</div>
-        <div class="nombre">Pantalón Local</div>
-        <div class="precio">29,99 €</div>
-      </a>
-      <a class="card" href="tienda.html">
-        <img src="Corto2.jpg" alt="Pantalón Visitante">
-        <div class="marca">BACALAOS FC</div>
-        <div class="nombre">Pantalón Visitante</div>
-        <div class="precio">29,99 €</div>
-      </a>
-    </div>
-  </main>
-
-</body>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="carrito.html">Carrito</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </header>
+    <section class="hero">
+      <div>
+        <p>La equipación del equipo</p>
+        <h1>Viste los colores de Bacalaos FC</h1>
+        <p>Descubre camisetas, pantalones y ropa oficial del club.</p>
+        <a class="boton" href="tienda.html">Ver la tienda</a>
+      </div>
+      <img src="images/logo.png" alt="Escudo de Bacalaos FC">
+    </section>
+    <main>
+      <h2>Productos destacados</h2>
+      <section class="productos">
+        <a class="producto" href="camiseta-local.html">
+          <img src="images/Camiseta1.jpg.jpeg" alt="Camiseta local">
+          <h2>Camiseta Local</h2>
+          <span class="precio">49,99 €</span>
+        </a>
+        <a class="producto" href="camiseta-visitante.html">
+          <img src="images/Camiseta2.jpeg" alt="Camiseta visitante">
+          <h2>Camiseta Visitante</h2>
+          <span class="precio">49,99 €</span>
+        </a>
+        <a class="producto" href="chaqueta.html">
+          <img src="images/Chaqueta.png" alt="Chaqueta del equipo">
+          <h2>Chaqueta</h2>
+          <span class="precio">59,99 €</span>
+        </a>
+      </section>
+    </main>
+    <footer>
+      <p>
+        <a href="https://github.com/alvaro-llorente-barata/HTML">Tienda web Bacalaos FC</a>
+        © 2026 por <a href="https://github.com/alvaro-llorente-barata">Bacalaos FC</a>
+        está bajo la licencia
+        <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+        <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">
+      </p>
+    </footer>
+  </body>
 </html>

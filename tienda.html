@@ -1,95 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tienda | Bacalaos FC</title>
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: "Public Sans", Arial, sans-serif; background: #f7f7f3; color: #1c2b22; }
-
-    header {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 20px 40px;
-    }
-    .logo { font-weight: 800; letter-spacing: 1px; }
-    nav a { margin-left: 24px; text-decoration: none; color: #1c2b22; font-size: 15px; }
-    nav a:hover { text-decoration: underline; }
-
-    main { max-width: 800px; margin: 0 auto; padding: 30px 20px 60px; }
-    h1 { font-size: 40px; font-weight: 800; letter-spacing: -1px; margin-bottom: 30px; }
-    h2 { font-size: 20px; margin-bottom: 20px; }
-    p { margin-bottom: 30px; font-size: 15px; }
-
-    .lista { display: flex; flex-direction: column; gap: 10px; }
-    .producto {
-      display: flex; align-items: center; gap: 20px;
-      padding: 16px 18px; border: 1px solid #d9dcd5; border-radius: 6px;
-      text-decoration: none; color: inherit; transition: transform .15s, background .15s;
-    }
-    .producto:hover { background: #edf1ec; transform: scale(1.04); }
-    .producto img { width: 70px; height: 70px; object-fit: contain; background: #fff; }
-    .nombre { flex: 1; font-weight: 600; font-size: 15px; }
-    .precio { font-weight: 700; color: #1f5a3a; }
-
-    form { display: flex; flex-direction: column; gap: 14px; max-width: 500px; }
-    input, textarea { padding: 12px; border: 1px solid #d9dcd5; border-radius: 6px; font: inherit; background: #fff; }
-    textarea { min-height: 140px; resize: vertical; }
-    button { padding: 12px; border: 0; border-radius: 6px; background: #1f5a3a; color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
-
-    footer { text-align: center; padding: 30px; font-size: 14px; color: #777; }
-  </style>
-</head>
-<body>
-
-  <header>
-    <div class="logo">BACALAOS FC</div>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="tienda.html">Tienda</a>
-      <a href="contacto.html">Contacto</a>
-    </nav>
-  </header>
-
-  <main>
-    <h1>Tienda</h1>
-    <p>Algunas fotos siguen siendo provisionales.</p>
-    <div class="lista">
-      <a class="producto" href="#">
-        <img src="Camiseta1.jpg.jpeg" alt="Camiseta Local">
-        <span class="nombre">Camiseta Local</span>
-        <span class="precio">49,99 €</span>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tienda | Bacalaos FC</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="site.css">
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="index.html">
+        <img src="images/logo.png" alt=""> <span>Bacalaos FC</span>
       </a>
-      <a class="producto" href="#">
-        <img src="Camiseta2.jpeg" alt="Camiseta Visitante">
-        <span class="nombre">Camiseta Visitante</span>
-        <span class="precio">49,99 €</span>
-      </a>
-      <a class="producto" href="#">
-        <img src="Chaqueta.png" alt="Chaqueta">
-        <span class="nombre">Chaqueta</span>
-        <span class="precio">59,99 €</span>
-      </a>
-      <a class="producto" href="#">
-        <img src="PantalonLargo.png" alt="Pantalón largo">
-        <span class="nombre">Pantalón largo</span>
-        <span class="precio">39,99 €</span>
-      </a>
-      <a class="producto" href="#">
-        <img src="Corto1.png" alt="Pantalón Local">
-        <span class="nombre">Pantalón Local</span>
-        <span class="precio">29,99 €</span>
-      </a>
-      <a class="producto" href="#">
-        <img src="Corto2.jpg" alt="Pantalón Visitante">
-        <span class="nombre">Pantalón Visitante</span>
-        <span class="precio">29,99 €</span>
-      </a>
-    </div>
-  </main>
-
-  <footer>© Bacalaos FC</footer>
-
-</body>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="carrito.html">Carrito</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Tienda</h1>
+      <p>Productos oficiales de Bacalaos FC.</p>
+      <section class="productos">
+        <a class="producto" href="camiseta-local.html">
+          <img src="images/Camiseta1.jpg.jpeg" alt="Camiseta local">
+          <h2>Camiseta Local</h2>
+          <span class="precio">49,99 €</span>
+        </a>
+        <a class="producto" href="camiseta-visitante.html">
+          <img src="images/Camiseta2.jpeg" alt="Camiseta visitante">
+          <h2>Camiseta Visitante</h2>
+          <span class="precio">49,99 €</span>
+        </a>
+        <a class="producto" href="chaqueta.html">
+          <img src="images/Chaqueta.png" alt="Chaqueta del equipo">
+          <h2>Chaqueta</h2>
+          <span class="precio">59,99 €</span>
+        </a>
+        <a class="producto" href="pantalon-largo.html">
+          <img src="images/PantalonLargo.png" alt="Pantalón largo">
+          <h2>Pantalón largo</h2>
+          <span class="precio">39,99 €</span>
+        </a>
+        <a class="producto" href="pantalon-local.html">
+          <img src="images/Corto1.png" alt="Pantalón local">
+          <h2>Pantalón Local</h2>
+          <span class="precio">29,99 €</span>
+        </a>
+        <a class="producto" href="pantalon-visitante.html">
+          <img src="images/Corto2.jpg" alt="Pantalón visitante">
+          <h2>Pantalón Visitante</h2>
+          <span class="precio">29,99 €</span>
+        </a>
+      </section>
+    </main>
+    <footer>
+      <p>
+        <a href="https://github.com/alvaro-llorente-barata/HTML">Tienda web Bacalaos FC</a>
+        © 2026 por <a href="https://github.com/alvaro-llorente-barata">Bacalaos FC</a>
+        está bajo la licencia
+        <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+        <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">
+      </p>
+    </footer>
+  </body>
 </html>

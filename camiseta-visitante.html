@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Camiseta Visitante | Bacalaos FC</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="site.css">
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="index.html">
+        <img src="images/logo.png" alt=""> <span>Bacalaos FC</span>
+      </a>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="carrito.html">Carrito</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </header>
+    <main>
+      <section class="detalle">
+        <img src="images/Camiseta2.jpeg" alt="Camiseta Visitante">
+        <div>
+          <p>Bacalaos FC</p>
+          <h1>Camiseta Visitante</h1>
+          <p>Camiseta de la equipación visitante de Bacalaos FC.</p>
+          <p class="precio">49,99 €</p>
+          <form class="formulario-producto" action="carrito.html" method="get">
+            <label for="talla">Talla</label>
+            <select id="talla" name="talla" required>
+              <option value="" selected disabled>Elige una talla</option>
+              <option value="XXS">XXS</option>
+              <option value="XS">XS</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+              <option value="XXL">XXL</option>
+            </select>
+            <button class="boton" type="submit">Continuar al carrito</button>
+            <p class="aviso-carrito">La talla es obligatoria. HTML y CSS no permiten guardar el artículo en el carrito.</p>
+          </form>
+          <p><a href="carrito.html">Ver carrito</a></p>
+          <p><a href="tienda.html">Volver a la tienda</a></p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        <a href="https://github.com/alvaro-llorente-barata/HTML">Tienda web Bacalaos FC</a>
+        © 2026 por <a href="https://github.com/alvaro-llorente-barata">Bacalaos FC</a>
+        está bajo la licencia
+        <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+        <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">
+      </p>
+    </footer>
+  </body>
+</html>
