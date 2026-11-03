@@ -220,9 +220,33 @@ p {
   cursor: pointer;
 }
 
-.aviso-carrito {
-  margin: 0;
-  font-size: 0.9rem;
+.articulo-carrito {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.articulo-carrito img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  background: #f1f1ed;
+}
+
+.articulo-carrito h2,
+.articulo-carrito p {
+  margin: 0 0 4px;
+}
+
+.quitar-producto {
+  margin-left: auto;
+}
+
+.total-carrito {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 form {
