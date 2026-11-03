@@ -118,13 +118,27 @@ p {
   margin-top: 42px;
 }
 
+.video-club-media {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  justify-items: center;
+  gap: 18px;
+}
+
 .video-club video {
   display: block;
   width: 100%;
   max-width: 480px;
   height: auto;
-  margin: 0 auto;
   background: #17243b;
+}
+
+.video-club-media img {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
 }
 
 .producto {
@@ -253,6 +267,10 @@ footer a {
   .detalle {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .video-club-media {
+    grid-template-columns: 1fr;
   }
 
   .hero img,
