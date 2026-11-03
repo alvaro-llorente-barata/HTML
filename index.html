@@ -49,8 +49,10 @@
       </section>
       <section class="video-club">
         <h2>Momentos de Bacalaos FC</h2>
+        <audio id="audio-estadio" autoplay preload="auto" src="estadio.mp3"></audio>
+        <button class="boton-audio" id="boton-audio" type="button" aria-label="Pausar audio del estadio" aria-pressed="true" title="Pausar audio">Ⅱ</button>
         <div class="video-club-media">
-          <video controls preload="metadata" playsinline aria-label="Vídeo de Bacalaos FC">
+          <video controls autoplay muted preload="metadata" playsinline aria-label="Vídeo de Bacalaos FC">
             <source src="ganadores.mp4" type="video/mp4">
             Tu navegador no puede reproducir este vídeo.
           </video>
@@ -70,5 +72,32 @@
         <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">
       </p>
     </footer>
+    <script>
+      const audioEstadio = document.getElementById("audio-estadio");
+      const botonAudio = document.getElementById("boton-audio");
+
+      function actualizarBotonAudio() {
+        const reproduciendo = !audioEstadio.paused;
+        botonAudio.textContent = reproduciendo ? "Ⅱ" : "▶";
+        botonAudio.setAttribute("aria-label", `${reproduciendo ? "Pausar" : "Reproducir"} audio del estadio`);
+        botonAudio.title = `${reproduciendo ? "Pausar" : "Reproducir"} audio`;
+        botonAudio.setAttribute("aria-pressed", String(reproduciendo));
+      }
+
+      audioEstadio.addEventListener("play", actualizarBotonAudio);
+      audioEstadio.addEventListener("pause", actualizarBotonAudio);
+      botonAudio.addEventListener("click", async () => {
+        if (audioEstadio.paused) {
+          try {
+            await audioEstadio.play();
+          } catch (error) {
+            console.error("No se pudo reproducir el audio del estadio.", error);
+          }
+        } else {
+          audioEstadio.pause();
+        }
+      });
+      audioEstadio.play().catch(actualizarBotonAudio);
+    </script>
   </body>
 </html>
