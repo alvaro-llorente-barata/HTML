@@ -114,6 +114,19 @@ p {
   gap: 18px;
 }
 
+.video-club {
+  margin-top: 42px;
+}
+
+.video-club video {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  margin: 0 auto;
+  background: #17243b;
+}
+
 .producto {
   display: block;
   padding: 14px;
