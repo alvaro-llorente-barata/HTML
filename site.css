@@ -296,6 +296,112 @@ footer a {
   color: white;
 }
 
+/* ===== Animaciones ===== */
+
+/* Slider de imágenes (solo CSS): 5 diapositivas, 20s en total */
+.slider {
+  max-width: 800px;
+  margin: 36px auto 0;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #f1f1ed;
+}
+
+.slider-pista {
+  display: flex;
+  width: 500%;
+  animation: deslizar 20s infinite ease-in-out;
+}
+
+.slider-pista:hover {
+  animation-play-state: paused;
+}
+
+.slider figure {
+  width: 20%;
+  margin: 0;
+  text-align: center;
+  padding: 14px;
+}
+
+.slider img {
+  width: 100%;
+  height: 340px;
+  object-fit: contain;
+}
+
+.slider figcaption {
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+@keyframes deslizar {
+  0%, 16%   { transform: translateX(0); }
+  20%, 36%  { transform: translateX(-20%); }
+  40%, 56%  { transform: translateX(-40%); }
+  60%, 76%  { transform: translateX(-60%); }
+  80%, 96%  { transform: translateX(-80%); }
+  100%      { transform: translateX(0); }
+}
+
+/* Título del hero: entra desde la izquierda */
+.hero div {
+  animation: entrar-izquierda 1s ease-out both;
+}
+
+@keyframes entrar-izquierda {
+  from { opacity: 0; transform: translateX(-60px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Escudo del hero: flota arriba y abajo */
+.hero img {
+  animation: flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-14px); }
+}
+
+/* Botón: pulso continuo */
+.hero .boton {
+  animation: pulso 2s infinite;
+}
+
+@keyframes pulso {
+  0%   { box-shadow: 0 0 0 0 rgba(217, 223, 199, 0.7); }
+  70%  { box-shadow: 0 0 0 14px rgba(217, 223, 199, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(217, 223, 199, 0); }
+}
+
+/* Tarjetas de producto: aparecen con retraso escalonado y suben al pasar el ratón */
+.producto {
+  animation: aparecer 0.8s ease-out both;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.producto:nth-child(2) { animation-delay: 0.2s; }
+.producto:nth-child(3) { animation-delay: 0.4s; }
+
+.producto:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 @media (max-width: 700px) {
   header {
     align-items: flex-start;
