@@ -1006,3 +1006,15 @@ main,
     max-width: 100%;
   }
 }
+
+/* ===== Igualar el tamaño visual de las imágenes de producto ===== */
+/* Camiseta1 y Corto2 traen la prenda casi a sedal del borde; se reducen un poco */
+.productos .producto img {
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.productos .producto img[src$="Camiseta1.jpg.jpeg"],
+.productos .producto img[src$="Corto2.jpg"] {
+  scale: 0.82;
+}
