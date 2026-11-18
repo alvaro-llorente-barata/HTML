@@ -112,37 +112,22 @@
             <section class="pago-bloque" aria-labelledby="pago-resumen">
               <h2 id="pago-resumen">Resumen del pedido</h2>
 
-              <div class="pago-resumen-item">
-                <img src="images/Camiseta1.jpg.jpeg" alt="Camiseta Local">
-                <div class="flex-grow-1">
-                  <strong>Camiseta Local</strong>
-                  <div class="text-secondary small">Talla M · 1 unidad</div>
-                </div>
-                <span class="fw-bold">49,99 €</span>
-              </div>
-
-              <div class="pago-resumen-item">
-                <img src="images/Corto1.png" alt="Pantalón local">
-                <div class="flex-grow-1">
-                  <strong>Pantalón Local</strong>
-                  <div class="text-secondary small">Talla M · 1 unidad</div>
-                </div>
-                <span class="fw-bold">29,99 €</span>
-              </div>
+              <div id="pago-resumen-lista" aria-live="polite"></div>
+              <p id="pago-vacio" class="text-secondary mt-3" hidden>Tu carrito está vacío. <a href="tienda.html">Ir a la tienda</a></p>
 
               <ul class="list-group list-group-flush mt-3">
                 <li class="list-group-item d-flex justify-content-between px-0">
-                  <span>Subtotal</span><span>79,98 €</span>
+                  <span>Subtotal</span><span id="pago-subtotal">0,00 €</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between px-0">
                   <span>Envío</span><span class="text-success fw-bold">Gratis</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between px-0 pago-total">
-                  <span>Total</span><span>79,98 €</span>
+                  <span>Total</span><span id="pago-total">0,00 €</span>
                 </li>
               </ul>
 
-              <button type="submit" class="btn btn-primary pago-boton mt-4">Confirmar y pagar</button>
+              <button type="submit" id="pago-confirmar" class="btn btn-primary pago-boton mt-4">Confirmar y pagar</button>
               <p class="small text-secondary text-center mt-3 mb-0">Pago simulado para la práctica. No se realiza ningún cargo real.</p>
             </section>
           </aside>
@@ -175,6 +160,7 @@
     </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="carrito.js"></script>
     <script src="js/formularios.js"></script>
   </body>
 </html>
