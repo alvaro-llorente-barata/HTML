@@ -898,3 +898,8 @@ main > .seccion-cabecera h2 {
     font-size: 1.5rem;
   }
 }
+
+/* ===== Fondo blanco en todas las imágenes (excepto iconos del pie) ===== */
+img:not(footer img) {
+  background: #fff !important;
+}
