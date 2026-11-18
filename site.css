@@ -749,3 +749,152 @@ footer a:hover {
     height: 240px;
   }
 }
+
+/* ===== Colección (slider) y destacados ===== */
+
+.seccion-cabecera {
+  margin-bottom: 26px;
+}
+
+.seccion-cabecera p {
+  margin: 0;
+  color: #4a566b;
+}
+
+.etiqueta {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 3px 12px;
+  border-radius: 20px;
+  background: var(--crema);
+  color: var(--verde);
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.coleccion {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 22px 0;
+  width: 100%;
+}
+
+.coleccion .seccion-cabecera h2 {
+  position: relative;
+  padding-bottom: 10px;
+  font-size: 1.7rem;
+  color: var(--azul);
+}
+
+.coleccion .seccion-cabecera h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 56px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--verde);
+}
+
+.coleccion .slider {
+  max-width: none;
+  margin: 0;
+  background: linear-gradient(135deg, var(--azul) 0%, var(--azul-claro) 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(23, 36, 59, 0.25);
+}
+
+.slider figure {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 28px 40px;
+  text-align: left;
+}
+
+.slider img {
+  flex: 0 0 42%;
+  width: 42%;
+  height: 340px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #f1f1ed;
+}
+
+.slider figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0;
+  color: white;
+  font-weight: normal;
+}
+
+.slider figcaption strong {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.slider figcaption span {
+  color: #dfe5ee;
+  font-size: 1.05rem;
+}
+
+.slider figcaption .numero {
+  color: var(--crema);
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+/* Destacados: tarjetas con más aire */
+main > .seccion-cabecera {
+  margin-top: 4px;
+}
+
+main > .seccion-cabecera h2 {
+  margin-bottom: 8px;
+}
+
+.productos .producto {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.productos .producto img {
+  height: 260px;
+}
+
+.productos .producto h2 {
+  margin-top: 14px;
+  font-size: 1.15rem;
+}
+
+.productos .producto .precio {
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+@media (max-width: 700px) {
+  .slider figure {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 18px;
+  }
+
+  .slider img {
+    flex: none;
+    width: 100%;
+    height: 220px;
+  }
+
+  .slider figcaption strong {
+    font-size: 1.5rem;
+  }
+}
