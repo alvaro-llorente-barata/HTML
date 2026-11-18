@@ -47,7 +47,7 @@ const EQUIPOS = [
     },
     {
         "id":  "-OZdS2l6e897NTd5QWsv",
-        "nombre":  "Los Pollas",
+        "nombre":  "Los Pxllxs",
         "logo":  "https://firebasestorage.googleapis.com/v0/b/copafacil-web.appspot.com/o/events%2F-yz1s0%2Fxm16%2Fteams%2F-OZdS2l6e897NTd5QWsv.png?alt=media\u0026token=1\u0026m=1789139727427",
         "pj":  7,
         "pg":  0,
