@@ -903,3 +903,105 @@ main > .seccion-cabecera h2 {
 img:not(footer img) {
   background: #fff !important;
 }
+
+/* ===== Aprovechar el ancho de pantalla ===== */
+
+main,
+.coleccion {
+  max-width: 1400px;
+}
+
+.hero {
+  padding: 80px 8%;
+}
+
+.hero div {
+  max-width: 680px;
+}
+
+.hero h1 {
+  font-size: 3.6rem;
+}
+
+.hero img {
+  width: 340px;
+  height: 360px;
+}
+
+/* Slider más grande */
+.slider figure {
+  padding: 40px 56px;
+  gap: 48px;
+}
+
+.slider img {
+  height: 460px;
+}
+
+.slider figcaption strong {
+  font-size: 2.6rem;
+}
+
+.slider figcaption span {
+  font-size: 1.2rem;
+}
+
+/* Destacados: tarjetas más grandes */
+.productos {
+  gap: 30px;
+}
+
+.productos .producto {
+  padding: 22px;
+}
+
+.productos .producto img {
+  height: 360px;
+}
+
+.productos .producto h2 {
+  font-size: 1.35rem;
+}
+
+.productos .producto .precio {
+  font-size: 1.1rem;
+}
+
+/* Vídeo e imagen de los campeones a mayor tamaño */
+.video-club-media {
+  gap: 30px;
+}
+
+.video-club video,
+.video-club-media img {
+  max-width: 600px;
+}
+
+@media (max-width: 700px) {
+  .hero img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
+
+  .slider figure {
+    padding: 18px;
+  }
+
+  .slider img {
+    height: 240px;
+  }
+
+  .slider figcaption strong {
+    font-size: 1.6rem;
+  }
+
+  .productos .producto img {
+    height: 260px;
+  }
+
+  .video-club-media img,
+  .video-club video {
+    max-width: 100%;
+  }
+}
