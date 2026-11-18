@@ -1,0 +1,52 @@
+// Bloque de vídeo e imagen de los campeones.
+
+.video-club {
+  margin-top: 56px;
+  padding: 28px;
+  border-radius: 14px;
+  background: white;
+  box-shadow: var(--sombra);
+}
+
+.video-club-media {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  justify-items: center;
+  gap: 30px;
+}
+
+.video-club video {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  background: #17243b;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+.video-club-media img {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+@media (max-width: 700px) {
+  .video-club {
+    padding: 18px;
+  }
+
+  .video-club-media {
+    grid-template-columns: 1fr;
+  }
+
+  .video-club-media img,
+  .video-club video {
+    max-width: 100%;
+  }
+}

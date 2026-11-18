@@ -1,0 +1,97 @@
+// Slider de la colección: diapositivas con imagen y texto, desplazadas solo con CSS.
+
+.slider {
+  max-width: 800px;
+  margin: 36px auto 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 12px;
+  background: white;
+  box-shadow: var(--sombra);
+}
+
+// Fondo de la colección
+.coleccion .slider {
+  max-width: none;
+  margin: 0;
+  background: linear-gradient(135deg, var(--azul) 0%, var(--azul-claro) 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(23, 36, 59, 0.25);
+}
+
+// Seis diapositivas: la pista ocupa 600% y cada diapositiva 1/6
+.slider-pista {
+  display: flex;
+  width: 600%;
+  animation: deslizar 24s infinite ease-in-out;
+}
+
+.slider-pista:hover {
+  animation-play-state: paused;
+}
+
+.slider figure {
+  width: 16.6667%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 40px 56px;
+  text-align: left;
+}
+
+.slider img {
+  flex: 0 0 42%;
+  width: 42%;
+  height: 460px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #f1f1ed;
+}
+
+.slider figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+.slider figcaption strong {
+  font-size: 2.6rem;
+  line-height: 1.1;
+}
+
+.slider figcaption span {
+  color: #dfe5ee;
+  font-size: 1.2rem;
+}
+
+.slider figcaption .numero {
+  color: var(--crema);
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 700px) {
+  .slider figure {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 18px;
+  }
+
+  .slider img {
+    flex: none;
+    width: 100%;
+    height: 240px;
+  }
+
+  .slider figcaption strong {
+    font-size: 1.6rem;
+  }
+}

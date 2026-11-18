@@ -1,0 +1,23 @@
+// Punto de entrada. Compila todo a un único site.css que usan todas las páginas.
+// Orden: variables de marca -> Bootstrap con nuestro tema -> estilos propios por funcionalidad.
+
+@import "variables";
+@import "bootstrap/scss/bootstrap";
+
+@import "base/tipografia";
+@import "base/formularios";
+@import "components/cabecera";
+@import "components/hero";
+@import "components/secciones";
+@import "components/botones";
+@import "components/productos";
+@import "components/slider";
+@import "components/video";
+@import "components/audio";
+@import "components/detalle";
+@import "components/liga";
+@import "components/pie";
+@import "animations/animaciones";
+@import "pages/auth";
+@import "pages/novedades";
+@import "pages/pago";

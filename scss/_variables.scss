@@ -1,0 +1,26 @@
+// Colores y tipografía de Bacalaos FC.
+// Estas variables alimentan tanto nuestros estilos como el tema de Bootstrap.
+
+$azul: #17243b;
+$azul-claro: #26395c;
+$verde: #34533e;
+$crema: #d9dfc7;
+$fondo: #f4f5f0;
+$sombra: 0 4px 16px rgba(23, 36, 59, 0.1);
+
+// Tema de Bootstrap (se aplica antes de importar Bootstrap)
+$primary: $azul;
+$secondary: $verde;
+$success: $verde;
+$body-color: $azul;
+$body-bg: $fondo;
+$link-color: $azul;
+$link-hover-color: $verde;
+$font-family-sans-serif: Arial, sans-serif;
+$border-radius: 6px;
+$border-radius-lg: 12px;
+$btn-border-radius: 30px;
+$input-focus-border-color: $verde;
+$input-focus-box-shadow: 0 0 0 0.2rem rgba(52, 83, 62, 0.25);
+$enable-shadows: true;
+$card-border-radius: 12px;

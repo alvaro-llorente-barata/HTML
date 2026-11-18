@@ -1,0 +1,295 @@
+// Clasificación (izquierda) y partidos (derecha) de la División 3.
+
+.liga-izq,
+.liga-der {
+  min-width: 0;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto 24px;
+  padding: 0 22px;
+}
+
+.panel-liga {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(23, 36, 59, 0.1);
+  padding: 16px;
+}
+
+.panel-cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.panel-cabecera h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--azul);
+}
+
+.etiqueta-liga {
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: var(--verde);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.filtros {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filtros select {
+  padding: 6px 10px;
+  font: inherit;
+  font-size: 0.9rem;
+  border: 1px solid #bbb;
+  border-radius: 20px;
+  background: #fff;
+  max-width: 100%;
+}
+
+.tabla-scroll {
+  overflow-x: auto;
+}
+
+.tabla-clasificacion {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.tabla-clasificacion th,
+.tabla-clasificacion td {
+  padding: 7px 5px;
+  border-bottom: 1px solid #e6e6e0;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.tabla-clasificacion th {
+  font-size: 0.72rem;
+  color: #4a566b;
+  text-transform: uppercase;
+}
+
+.tabla-clasificacion .num {
+  text-align: center;
+}
+
+.tabla-clasificacion .pts {
+  font-weight: bold;
+}
+
+.tabla-clasificacion .pos {
+  display: inline-block;
+  min-width: 26px;
+  padding: 3px 0;
+  text-align: center;
+  border-radius: 4px;
+  background: var(--verde);
+  color: #fff;
+  font-weight: bold;
+}
+
+.tabla-clasificacion .equipo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.tabla-clasificacion .equipo img,
+.partido .lado img {
+  object-fit: contain;
+  background: #fff;
+}
+
+.tabla-clasificacion .equipo img {
+  width: 24px;
+  height: 24px;
+}
+
+.tabla-clasificacion tr.fila-equipo {
+  cursor: pointer;
+}
+
+.tabla-clasificacion tr.fila-equipo:hover td {
+  background: #f4f5f0;
+}
+
+.tabla-clasificacion .destacado td {
+  background: #eef2e4;
+  font-weight: bold;
+}
+
+.ayuda-liga {
+  margin: 8px 0 0;
+  font-size: 0.75rem;
+  color: #6b7385;
+}
+
+.lista-partidos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.partido {
+  border: 1px solid #e6e6e0;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.partido .equipos {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 8px;
+}
+
+.partido .lado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.partido .lado img {
+  width: 44px;
+  height: 44px;
+}
+
+.partido .centro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.estado {
+  padding: 2px 8px;
+  border-radius: 20px;
+  background: #e6e9ef;
+  color: #4a566b;
+  font-size: 0.65rem;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.estado.pendiente {
+  background: var(--crema);
+  color: var(--verde);
+}
+
+.marcador {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--azul);
+}
+
+.marcador.vs {
+  font-size: 1rem;
+  color: #6b7385;
+}
+
+.partido .cuando {
+  max-width: none;
+  margin: 8px 0 0;
+  font-size: 0.75rem;
+  color: #6b7385;
+  text-align: center;
+}
+
+.vacio {
+  color: #6b7385;
+}
+
+// Pantallas anchas: clasificación a la izquierda, partidos a la derecha, contenido en el centro
+@media (min-width: 1880px) {
+  body {
+    display: grid;
+    grid-template-columns: 500px minmax(0, 920px) 360px;
+    justify-content: center;
+    column-gap: 24px;
+    align-items: start;
+  }
+
+  header,
+  .hero,
+  footer {
+    grid-column: 1 / -1;
+  }
+
+  .coleccion {
+    grid-column: 2;
+    grid-row: 3;
+    max-width: none;
+    margin: 0;
+  }
+
+  main {
+    grid-column: 2;
+    grid-row: 4;
+    max-width: none;
+    margin: 0;
+  }
+
+  .liga-izq {
+    grid-column: 1;
+    grid-row: 3 / 5;
+    position: sticky;
+    top: 100px;
+    align-self: start;
+    max-width: none;
+    margin: 42px 0 0;
+    padding: 0;
+  }
+
+  .liga-der {
+    grid-column: 3;
+    grid-row: 3 / 5;
+    position: sticky;
+    top: 100px;
+    align-self: start;
+    max-width: none;
+    margin: 42px 0 0;
+    padding: 0;
+  }
+
+  .lista-partidos {
+    max-height: calc(100vh - 260px);
+  }
+}
+
+@media (max-width: 700px) {
+  .partido .equipos {
+    gap: 4px;
+  }
+
+  .partido .lado {
+    font-size: 0.75rem;
+  }
+
+  .partido .lado img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .marcador {
+    font-size: 1.2rem;
+  }
+}

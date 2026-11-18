@@ -1,0 +1,20 @@
+// Botón de acción principal (enlaces con aspecto de botón).
+
+.boton {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 13px 26px;
+  background: #d9dfc7;
+  color: #17243b;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.boton:hover {
+  background: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.22);
+}

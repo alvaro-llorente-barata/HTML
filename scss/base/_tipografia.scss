@@ -1,0 +1,113 @@
+// Base global: variables CSS, tipografía, enlaces, botones genéricos y utilidades.
+
+:root {
+  --azul: #{$azul};
+  --azul-claro: #{$azul-claro};
+  --verde: #{$verde};
+  --crema: #{$crema};
+  --fondo: #{$fondo};
+  --sombra: #{$sombra};
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  color: #17243b;
+  background: var(--fondo);
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
+a {
+  color: inherit;
+}
+
+main {
+  flex: 1;
+  max-width: 1400px;
+  margin: auto;
+  padding: 42px 22px 60px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  margin: 8px 0 16px;
+}
+
+h2 {
+  margin: 0 0 18px;
+}
+
+p {
+  max-width: 680px;
+}
+
+// Títulos de sección con detalle de color
+main h2 {
+  position: relative;
+  padding-bottom: 10px;
+  font-size: 1.7rem;
+  color: var(--azul);
+}
+
+main h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 56px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--verde);
+}
+
+button {
+  padding: 11px;
+  border: 0;
+  background: #17243b;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+  background: var(--verde);
+}
+
+// Accesibilidad: foco visible con teclado
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--verde);
+  outline-offset: 3px;
+}
+
+// Texto solo para lectores de pantalla
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+// Fondo blanco en todas las imágenes (los PNG transparentes también)
+img:not(footer img) {
+  background: #fff !important;
+}
+
+// Camiseta1 y Corto2 tienen el fondo en gris claro; brightness lo lleva a blanco
+img[src$="Camiseta1.jpg.jpeg"],
+img[src$="Corto2.jpg"] {
+  filter: brightness(1.06);
+}

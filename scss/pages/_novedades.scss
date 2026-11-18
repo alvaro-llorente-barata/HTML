@@ -1,0 +1,53 @@
+// Tienda de novedades y ficha de una novedad.
+
+.novedad-card {
+  border: 0;
+  border-radius: 12px;
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.novedad-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(23, 36, 59, 0.18);
+}
+
+.novedad-card img {
+  height: 300px;
+  object-fit: contain;
+  background: #fff;
+}
+
+.novedad-card .badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+}
+
+.novedad-tarjeta {
+  position: relative;
+}
+
+.novedad-cabecera {
+  background: linear-gradient(135deg, var(--azul) 0%, var(--azul-claro) 100%);
+  color: #fff;
+  padding: 56px 0;
+}
+
+.novedad-cabecera h1 {
+  color: #fff;
+  font-size: 2.6rem;
+}
+
+.novedad-cabecera p {
+  color: #dfe5ee;
+}
+
+.novedad-imagen {
+  border-radius: 14px;
+  box-shadow: var(--sombra);
+  background: #fff;
+  width: 100%;
+  object-fit: contain;
+}

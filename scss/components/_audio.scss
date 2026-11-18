@@ -1,0 +1,23 @@
+// Botón flotante de play/pausa del audio del estadio.
+
+.boton-audio {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  background: var(--azul);
+  font-size: 0.9rem;
+  line-height: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.boton-audio:hover {
+  transform: scale(1.12);
+  background: var(--verde);
+}

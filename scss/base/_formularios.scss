@@ -1,0 +1,34 @@
+// Formularios de las páginas de producto, carrito y contacto.
+
+form {
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input,
+textarea,
+select {
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input,
+textarea {
+  padding: 10px;
+  font: inherit;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+
+textarea {
+  min-height: 130px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--verde);
+  box-shadow: 0 0 0 3px rgba(52, 83, 62, 0.2);
+}

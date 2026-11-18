@@ -1,0 +1,86 @@
+// Ficha de producto, carrito y formulario de talla.
+
+.detalle {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 28px;
+  border-radius: 14px;
+  background: white;
+  box-shadow: var(--sombra);
+}
+
+.detalle img {
+  width: 48%;
+  height: 430px;
+  object-fit: contain;
+  background: #f1f1ed;
+  border-radius: 10px;
+}
+
+.detalle div {
+  max-width: 460px;
+}
+
+.formulario-producto {
+  margin: 20px 0;
+}
+
+.formulario-producto select {
+  padding: 10px;
+  font: inherit;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  background: white;
+}
+
+.formulario-producto .boton {
+  border: 0;
+  cursor: pointer;
+}
+
+.articulo-carrito {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px;
+  margin-bottom: 10px;
+  border: 0;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(23, 36, 59, 0.08);
+}
+
+.articulo-carrito img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  background: #f1f1ed;
+}
+
+.articulo-carrito h2,
+.articulo-carrito p {
+  margin: 0 0 4px;
+}
+
+.quitar-producto {
+  margin-left: auto;
+}
+
+.total-carrito {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--verde);
+}
+
+@media (max-width: 700px) {
+  .detalle {
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .detalle img {
+    width: 100%;
+  }
+}

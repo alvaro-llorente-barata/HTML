@@ -1,0 +1,26 @@
+// Pie de página con licencia y enlaces.
+
+footer {
+  padding: 24px 5%;
+  color: white;
+  background: #17243b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  border-top: 4px solid var(--crema);
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: var(--crema);
+}

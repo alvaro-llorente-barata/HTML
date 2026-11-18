@@ -1,0 +1,26 @@
+{
+  "name": "html",
+  "version": "1.0.0",
+  "description": "Tienda web de Bacalaos FC",
+  "private": true,
+  "scripts": {
+    "build:css": "sass --load-path=node_modules --style=expanded --no-source-map scss/main.scss site.css",
+    "watch:css": "sass --load-path=node_modules --watch --style=expanded --no-source-map scss/main.scss site.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alvaro-llorente-barata/HTML.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alvaro-llorente-barata/HTML/issues"
+  },
+  "homepage": "https://github.com/alvaro-llorente-barata/HTML#readme",
+  "dependencies": {
+    "@popperjs/core": "2.11.8",
+    "bootstrap": "5.3.3"
+  },
+  "devDependencies": {
+    "sass": "1.80.6"
+  }
+}

@@ -1,0 +1,48 @@
+// Página de pago: formulario de envío y resumen del pedido.
+
+.pago-cabecera {
+  margin-bottom: 24px;
+}
+
+.pago-bloque {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: var(--sombra);
+  padding: 24px;
+  height: 100%;
+}
+
+.pago-bloque h2 {
+  font-size: 1.25rem;
+  margin: 0 0 16px;
+  color: var(--azul);
+}
+
+.pago-resumen-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e6e6e0;
+}
+
+.pago-resumen-item img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.pago-total {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--verde);
+}
+
+.pago-boton {
+  width: 100%;
+  padding: 14px;
+  border-radius: 30px;
+  font-weight: bold;
+}

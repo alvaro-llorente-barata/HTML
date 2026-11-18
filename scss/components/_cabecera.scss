@@ -1,0 +1,77 @@
+// Cabecera fija con logo y menú de navegación.
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  padding: 12px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 3px solid var(--crema);
+  box-shadow: 0 2px 10px rgba(23, 36, 59, 0.08);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--azul);
+}
+
+.logo img {
+  width: 42px;
+  height: 46px;
+  object-fit: contain;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+// Enlaces del menú con subrayado animado
+nav a {
+  position: relative;
+  padding: 6px 2px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--verde);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--verde);
+  text-decoration: none;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+@media (max-width: 700px) {
+  header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

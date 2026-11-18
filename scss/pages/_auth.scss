@@ -1,0 +1,36 @@
+// Páginas de registro e inicio de sesión.
+
+.pagina-auth {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 16px;
+  background: linear-gradient(135deg, var(--azul) 0%, var(--azul-claro) 100%);
+}
+
+.tarjeta-auth {
+  width: 100%;
+  max-width: 460px;
+  padding: 36px 32px;
+  border: 0;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.tarjeta-auth h1 {
+  font-size: 1.9rem;
+  margin: 0 0 6px;
+  color: var(--azul);
+}
+
+.tarjeta-auth .form-control {
+  padding: 10px 12px;
+}
+
+// Formulario de Bootstrap dentro de la tarjeta: anulamos el ancho fijo de form
+.tarjeta-auth form {
+  max-width: none;
+  gap: 0;
+}
