@@ -13029,6 +13029,11 @@ footer a:hover {
   object-fit: contain;
 }
 
+.pago-form {
+  max-width: none;
+  display: block;
+}
+
 .pago-cabecera {
   margin-bottom: 24px;
 }

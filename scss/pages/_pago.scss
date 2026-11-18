@@ -1,5 +1,11 @@
 // Página de pago: formulario de envío y resumen del pedido.
 
+// El formulario de pago es una rejilla de dos columnas, no una columna estrecha
+.pago-form {
+  max-width: none;
+  display: block;
+}
+
 .pago-cabecera {
   margin-bottom: 24px;
 }

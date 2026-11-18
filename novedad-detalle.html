@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chaqueta Temporada 2026 | Bacalaos FC</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="site.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-white border-bottom py-2 w-100">
+        <div class="container-xxl">
+          <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
+            <img src="images/logo.png" alt="" width="42" height="46"> Bacalaos FC
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menu-principal">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+              <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+              <li class="nav-item"><a class="nav-link active" href="novedades.html" aria-current="page">Novedades</a></li>
+              <li class="nav-item"><a class="nav-link" href="carrito.html">Carrito</a></li>
+              <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+              <li class="nav-item"><a class="btn btn-outline-primary btn-sm" href="login.html">Iniciar sesión</a></li>
+              <li class="nav-item"><a class="btn btn-primary btn-sm" href="registro.html">Registro</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+          <li class="breadcrumb-item"><a href="novedades.html">Novedades</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Chaqueta Temporada 2026</li>
+        </ol>
+      </nav>
+
+      <div class="row g-5 align-items-start">
+        <div class="col-12 col-lg-6">
+          <img src="images/Chaqueta.png" class="img-fluid novedad-imagen p-3" alt="Chaqueta Temporada 2026 de Bacalaos FC">
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <span class="badge bg-success mb-3">Nuevo</span>
+          <h1 class="display-6 fw-bold text-primary">Chaqueta Temporada 2026</h1>
+          <p class="fs-3 fw-bold text-success mb-3">59,99 €</p>
+          <p class="text-secondary">Chaqueta de entrenamiento con cremallera completa, mangas con detalles en azul claro y escudo bordado del club. Ideal para el calentamiento y para los días fríos en la grada.</p>
+
+          <form id="form-detalle" class="mt-4 needs-validation" novalidate data-aviso-titulo="Producto añadido" data-aviso="La chaqueta se ha añadido a tu carrito.">
+            <div class="row g-3 align-items-end">
+              <div class="col-sm-6">
+                <label for="detalle-talla" class="form-label fw-bold">Talla</label>
+                <select id="detalle-talla" class="form-select" required>
+                  <option value="" selected disabled>Elige una talla</option>
+                  <option>S</option>
+                  <option>M</option>
+                  <option>L</option>
+                  <option>XL</option>
+                </select>
+                <div class="invalid-feedback">Elige una talla antes de añadir al carrito.</div>
+              </div>
+              <div class="col-sm-3">
+                <label for="detalle-cantidad" class="form-label fw-bold">Cantidad</label>
+                <input type="number" id="detalle-cantidad" class="form-control" value="1" min="1" max="10" required>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg w-100 mt-4 fw-bold">Añadir al carrito</button>
+          </form>
+
+          <div class="accordion mt-4" id="detalle-info">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#info-materiales" aria-expanded="true" aria-controls="info-materiales">
+                  Materiales y cuidado
+                </button>
+              </h2>
+              <div id="info-materiales" class="accordion-collapse collapse show" data-bs-parent="#detalle-info">
+                <div class="accordion-body">Poliéster reciclado. Lavar a 30 ºC del revés y no usar secadora.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#info-tallas" aria-expanded="false" aria-controls="info-tallas">
+                  Guía de tallas
+                </button>
+              </h2>
+              <div id="info-tallas" class="accordion-collapse collapse" data-bs-parent="#detalle-info">
+                <div class="accordion-body">
+                  <table class="table table-sm mb-0">
+                    <thead><tr><th scope="col">Talla</th><th scope="col">Pecho (cm)</th></tr></thead>
+                    <tbody>
+                      <tr><td>S</td><td>88-92</td></tr>
+                      <tr><td>M</td><td>96-100</td></tr>
+                      <tr><td>L</td><td>104-108</td></tr>
+                      <tr><td>XL</td><td>112-116</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#info-envio" aria-expanded="false" aria-controls="info-envio">
+                  Envío y devoluciones
+                </button>
+              </h2>
+              <div id="info-envio" class="accordion-collapse collapse" data-bs-parent="#detalle-info">
+                <div class="accordion-body">Envío gratis desde 50 €. Devoluciones gratuitas durante 30 días.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal fade" id="modal-aviso" tabindex="-1" aria-labelledby="modal-aviso-titulo" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 rounded-4 shadow">
+          <div class="modal-header border-0 pb-0">
+            <h2 class="modal-title fs-4 fw-bold" id="modal-aviso-titulo">Aviso</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body" id="modal-aviso-texto"></div>
+          <div class="modal-footer border-0 pt-0">
+            <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Seguir comprando</button>
+            <a href="pago.html" class="btn btn-primary">Ir a pagar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        <a href="https://github.com/alvaro-llorente-barata/HTML">Tienda web Bacalaos FC</a>
+        © 2026 por <a href="https://github.com/alvaro-llorente-barata">Bacalaos FC</a>
+        está bajo la licencia
+        <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+      </p>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/formularios.js"></script>
+  </body>
+</html>

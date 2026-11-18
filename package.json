@@ -1,11 +1,11 @@
-{
+﻿{
   "name": "html",
   "version": "1.0.0",
   "description": "Tienda web de Bacalaos FC",
   "private": true,
   "scripts": {
-    "build:css": "sass --load-path=node_modules --style=expanded --no-source-map scss/main.scss site.css",
-    "watch:css": "sass --load-path=node_modules --watch --style=expanded --no-source-map scss/main.scss site.css"
+    "build:css": "sass --load-path=node_modules --quiet-deps --style=expanded --no-source-map scss/main.scss site.css",
+    "watch:css": "sass --load-path=node_modules --watch --quiet-deps --style=expanded --no-source-map scss/main.scss site.css"
   },
   "repository": {
     "type": "git",
@@ -24,3 +24,4 @@
     "sass": "1.80.6"
   }
 }
+

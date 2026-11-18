@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pago | Bacalaos FC</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="site.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-white border-bottom py-2 w-100">
+        <div class="container-xxl">
+          <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
+            <img src="images/logo.png" alt="" width="42" height="46"> Bacalaos FC
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menu-principal">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+              <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+              <li class="nav-item"><a class="nav-link" href="novedades.html">Novedades</a></li>
+              <li class="nav-item"><a class="nav-link active" href="carrito.html" aria-current="page">Carrito</a></li>
+              <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+              <li class="nav-item"><a class="btn btn-outline-primary btn-sm" href="login.html">Iniciar sesión</a></li>
+              <li class="nav-item"><a class="btn btn-primary btn-sm" href="registro.html">Registro</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="pago-cabecera">
+        <span class="etiqueta">Paso final</span>
+        <h1>Finalizar compra</h1>
+      </div>
+
+      <form id="form-pago" class="pago-form needs-validation" novalidate data-aviso-titulo="Compra realizada" data-aviso="Gracias por tu pedido. Te enviaremos un correo con los detalles y el seguimiento del envío.">
+        <div class="row g-4">
+          <div class="col-12 col-lg-7">
+            <section class="pago-bloque mb-4" aria-labelledby="pago-envio">
+              <h2 id="pago-envio">1. Datos de envío</h2>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="pago-nombre" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="pago-nombre" required>
+                  <div class="invalid-feedback">Escribe tu nombre.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label for="pago-apellidos" class="form-label">Apellidos</label>
+                  <input type="text" class="form-control" id="pago-apellidos" required>
+                  <div class="invalid-feedback">Escribe tus apellidos.</div>
+                </div>
+                <div class="col-12">
+                  <label for="pago-direccion" class="form-label">Dirección</label>
+                  <input type="text" class="form-control" id="pago-direccion" placeholder="Calle, número, piso" required>
+                  <div class="invalid-feedback">Escribe tu dirección.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label for="pago-ciudad" class="form-label">Ciudad</label>
+                  <input type="text" class="form-control" id="pago-ciudad" required>
+                  <div class="invalid-feedback">Escribe tu ciudad.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label for="pago-cp" class="form-label">Código postal</label>
+                  <input type="text" class="form-control" id="pago-cp" pattern="[0-9]{5}" inputmode="numeric" required>
+                  <div class="invalid-feedback">El código postal tiene 5 cifras.</div>
+                </div>
+                <div class="col-12">
+                  <label for="pago-email" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" id="pago-email" required>
+                  <div class="invalid-feedback">Introduce un correo válido.</div>
+                </div>
+              </div>
+            </section>
+
+            <section class="pago-bloque" aria-labelledby="pago-metodo">
+              <h2 id="pago-metodo">2. Método de pago</h2>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="metodo" id="pago-tarjeta" checked>
+                <label class="form-check-label" for="pago-tarjeta">Tarjeta de crédito o débito</label>
+              </div>
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="radio" name="metodo" id="pago-paypal">
+                <label class="form-check-label" for="pago-paypal">PayPal</label>
+              </div>
+
+              <div class="row g-3">
+                <div class="col-12">
+                  <label for="pago-tarjeta-numero" class="form-label">Número de tarjeta</label>
+                  <input type="text" class="form-control" id="pago-tarjeta-numero" pattern="[0-9 ]{19}" placeholder="0000 0000 0000 0000" inputmode="numeric" required>
+                  <div class="invalid-feedback">Escribe los 16 dígitos de la tarjeta.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label for="pago-caducidad" class="form-label">Caducidad</label>
+                  <input type="text" class="form-control" id="pago-caducidad" pattern="(0[1-9]|1[0-2])\/[0-9]{2}" placeholder="MM/AA" required>
+                  <div class="invalid-feedback">Usa el formato MM/AA.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label for="pago-cvv" class="form-label">CVV</label>
+                  <input type="text" class="form-control" id="pago-cvv" pattern="[0-9]{3}" inputmode="numeric" required>
+                  <div class="invalid-feedback">El CVV tiene 3 cifras.</div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <aside class="col-12 col-lg-5">
+            <section class="pago-bloque" aria-labelledby="pago-resumen">
+              <h2 id="pago-resumen">Resumen del pedido</h2>
+
+              <div class="pago-resumen-item">
+                <img src="images/Camiseta1.jpg.jpeg" alt="Camiseta Local">
+                <div class="flex-grow-1">
+                  <strong>Camiseta Local</strong>
+                  <div class="text-secondary small">Talla M · 1 unidad</div>
+                </div>
+                <span class="fw-bold">49,99 €</span>
+              </div>
+
+              <div class="pago-resumen-item">
+                <img src="images/Corto1.png" alt="Pantalón local">
+                <div class="flex-grow-1">
+                  <strong>Pantalón Local</strong>
+                  <div class="text-secondary small">Talla M · 1 unidad</div>
+                </div>
+                <span class="fw-bold">29,99 €</span>
+              </div>
+
+              <ul class="list-group list-group-flush mt-3">
+                <li class="list-group-item d-flex justify-content-between px-0">
+                  <span>Subtotal</span><span>79,98 €</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between px-0">
+                  <span>Envío</span><span class="text-success fw-bold">Gratis</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between px-0 pago-total">
+                  <span>Total</span><span>79,98 €</span>
+                </li>
+              </ul>
+
+              <button type="submit" class="btn btn-primary pago-boton mt-4">Confirmar y pagar</button>
+              <p class="small text-secondary text-center mt-3 mb-0">Pago simulado para la práctica. No se realiza ningún cargo real.</p>
+            </section>
+          </aside>
+        </div>
+      </form>
+    </main>
+
+    <div class="modal fade" id="modal-aviso" tabindex="-1" aria-labelledby="modal-aviso-titulo" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 rounded-4 shadow">
+          <div class="modal-header border-0 pb-0">
+            <h2 class="modal-title fs-4 fw-bold" id="modal-aviso-titulo">Aviso</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body" id="modal-aviso-texto"></div>
+          <div class="modal-footer border-0 pt-0">
+            <a href="index.html" class="btn btn-primary">Volver al inicio</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        <a href="https://github.com/alvaro-llorente-barata/HTML">Tienda web Bacalaos FC</a>
+        © 2026 por <a href="https://github.com/alvaro-llorente-barata">Bacalaos FC</a>
+        está bajo la licencia
+        <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+      </p>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/formularios.js"></script>
+  </body>
+</html>
