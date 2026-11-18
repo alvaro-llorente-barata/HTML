@@ -12945,6 +12945,9 @@ footer a:hover {
 }
 .pagina-auth {
   flex: 1;
+  width: 100%;
+  max-width: none;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
