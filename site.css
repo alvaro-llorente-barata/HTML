@@ -1007,21 +1007,4 @@ main,
   }
 }
 
-/* ===== Igualar el tamaño visual de las imágenes de producto ===== */
-/* Camiseta1 y Corto2 traen la prenda casi a sedal del borde; se reducen un poco */
-.productos .producto img {
-  padding: 16px;
-  box-sizing: border-box;
-}
 
-.productos .producto img[src$="Camiseta1.jpg.jpeg"],
-.productos .producto img[src$="Corto2.jpg"] {
-  scale: 0.82;
-}
-
-/* ===== Fondo realmente blanco en las fotos con fondo gris =====
-   Camiseta1 tiene el fondo en RGB 241 y Corto2 en 247; con brightness se llevan a blanco */
-img[src$="Camiseta1.jpg.jpeg"],
-img[src$="Corto2.jpg"] {
-  filter: brightness(1.06);
-}
