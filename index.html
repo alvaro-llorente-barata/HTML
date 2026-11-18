@@ -128,62 +128,54 @@
         </div>
       </section>
     </main>
-    <aside class="laterales" aria-label="Clasificación y partidos de Bacalaos FC">
-      <section class="panel">
-        <h2>Clasificación</h2>
-        <p class="panel-sub">Supreme League · División 3</p>
-        <table>
-          <caption class="sr-only">Clasificación de la División 3</caption>
-          <thead>
-            <tr>
-              <th scope="col">Pos</th>
-              <th scope="col">Equipo</th>
-              <th scope="col">PJ</th>
-              <th scope="col">PG</th>
-              <th scope="col">PE</th>
-              <th scope="col">PP</th>
-              <th scope="col">Pts</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>1</td><td>Redención C.F</td><td>7</td><td>6</td><td>0</td><td>1</td><td>18</td></tr>
-            <tr><td>2</td><td>Yayo vallecano</td><td>6</td><td>5</td><td>1</td><td>0</td><td>16</td></tr>
-            <tr class="destacado"><td>3</td><td>Bacalaos FC</td><td>8</td><td>5</td><td>1</td><td>2</td><td>16</td></tr>
-            <tr><td>4</td><td>Goryneta</td><td>6</td><td>4</td><td>1</td><td>1</td><td>13</td></tr>
-            <tr><td>5</td><td>Estrella Coja</td><td>8</td><td>3</td><td>1</td><td>4</td><td>10</td></tr>
-            <tr><td>6</td><td>UD Retirados</td><td>7</td><td>3</td><td>0</td><td>4</td><td>9</td></tr>
-            <tr><td>7</td><td>Salud</td><td>7</td><td>2</td><td>1</td><td>4</td><td>7</td></tr>
-            <tr><td>8</td><td>Parritas</td><td>7</td><td>2</td><td>0</td><td>5</td><td>6</td></tr>
-            <tr><td>9</td><td>Fidimafia</td><td>6</td><td>2</td><td>0</td><td>4</td><td>6</td></tr>
-            <tr><td>10</td><td>Super Cordoba</td><td>7</td><td>2</td><td>0</td><td>5</td><td>6</td></tr>
-            <tr><td>11</td><td>Los Pollas</td><td>7</td><td>0</td><td>3</td><td>4</td><td>3</td></tr>
-          </tbody>
-        </table>
+    <aside class="liga-izq" aria-labelledby="titulo-clasificacion">
+      <section class="panel-liga">
+        <div class="panel-cabecera">
+          <h2 id="titulo-clasificacion">Clasificación</h2>
+          <span class="etiqueta-liga">División 3</span>
+        </div>
+        <div class="tabla-scroll">
+          <table class="tabla-clasificacion">
+            <caption class="sr-only">Clasificación de la División 3 de Supreme League</caption>
+            <thead>
+              <tr>
+                <th scope="col">Pos</th>
+                <th scope="col">Equipos</th>
+                <th scope="col" class="num">PTS</th>
+                <th scope="col" class="num">J</th>
+                <th scope="col" class="num">G</th>
+                <th scope="col" class="num">E</th>
+                <th scope="col" class="num">P</th>
+                <th scope="col" class="num">GF</th>
+                <th scope="col" class="num">GC</th>
+                <th scope="col" class="num">DIF</th>
+                <th scope="col" class="num">%</th>
+              </tr>
+            </thead>
+            <tbody id="clasificacion-cuerpo"></tbody>
+          </table>
+        </div>
+        <p class="ayuda-liga">Pulsa un equipo para ver sus partidos.</p>
       </section>
-      <section class="panel">
-        <h2>Partidos de Bacalaos FC</h2>
-        <table>
-          <caption class="sr-only">Partidos jugados y pendientes de Bacalaos FC</caption>
-          <thead>
-            <tr>
-              <th scope="col">Fecha</th>
-              <th scope="col">Partido</th>
-              <th scope="col">Resultado</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>20/09</td><td>Bacalaos FC - Parritas</td><td>4-3</td></tr>
-            <tr><td>27/09</td><td>Goryneta - Bacalaos FC</td><td>2-3</td></tr>
-            <tr><td>04/10</td><td>Bacalaos FC - Yayo vallecano</td><td>0-4</td></tr>
-            <tr><td>11/10</td><td>UD Retirados - Bacalaos FC</td><td>1-4</td></tr>
-            <tr><td>25/10</td><td>Bacalaos FC - Redención C.F</td><td>2-3</td></tr>
-            <tr><td>02/11</td><td>Bacalaos FC - Los Pollas</td><td>3-3</td></tr>
-            <tr><td>08/11</td><td>Estrella Coja - Bacalaos FC</td><td>0-5</td></tr>
-            <tr><td>15/11</td><td>Bacalaos FC - Salud</td><td>5-1</td></tr>
-            <tr><td>Por fijar</td><td>Bacalaos FC - Super Cordoba</td><td>Pendiente</td></tr>
-            <tr><td>Por fijar</td><td>Fidimafia - Bacalaos FC</td><td>Pendiente</td></tr>
-          </tbody>
-        </table>
+    </aside>
+    <aside class="liga-der" aria-labelledby="titulo-partidos">
+      <section class="panel-liga">
+        <div class="panel-cabecera">
+          <h2 id="titulo-partidos">Partidos</h2>
+          <div class="filtros">
+            <label class="sr-only" for="filtro-equipo">Equipo</label>
+            <select id="filtro-equipo">
+              <option value="">Todos los equipos</option>
+            </select>
+            <label class="sr-only" for="filtro-estado">Estado</label>
+            <select id="filtro-estado">
+              <option value="todos">Todos</option>
+              <option value="pendientes">Pendientes</option>
+              <option value="finalizados">Finalizados</option>
+            </select>
+          </div>
+        </div>
+        <div id="partidos-lista" class="lista-partidos" aria-live="polite"></div>
       </section>
     </aside>
     <button class="boton-audio" id="boton-audio" type="button" aria-label="Pausar audio del estadio" aria-pressed="true" title="Pausar audio">Ⅱ</button>
@@ -199,6 +191,7 @@
         <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">
       </p>
     </footer>
+    <script src="liga.js"></script>
     <script>
       const audioEstadio = document.getElementById("audio-estadio");
       const botonAudio = document.getElementById("boton-audio");
