@@ -12975,6 +12975,10 @@ footer a:hover {
   padding: 10px 12px;
 }
 
+.tarjeta-auth-ancha {
+  max-width: 880px;
+}
+
 .tarjeta-auth form {
   max-width: none;
   gap: 0;

@@ -32,6 +32,11 @@
   padding: 10px 12px;
 }
 
+// Registro: tarjeta más ancha para que los campos vayan en dos columnas y no quede alargada
+.tarjeta-auth-ancha {
+  max-width: 880px;
+}
+
 // Formulario de Bootstrap dentro de la tarjeta: anulamos el ancho fijo de form
 .tarjeta-auth form {
   max-width: none;
