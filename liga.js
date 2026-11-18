@@ -609,10 +609,6 @@ const PARTIDOS = [
     }
 ];
 
-// Jornadas: cada lista contiene los índices de PARTIDOS que se juegan en esa jornada.
-// La 8ª coincide con la jornada publicada en Copa Fácil; el resto está reconstruido por fechas.
-const JORNADAS = [[52,51,50,49,36],[48,47,46,37,32],[45,44,43,42,41],[40,39,38,28,2],[35,34,33,31,16],[30,29,27,26,53],[25,24,22,1,7],[17,18,19,20,21],[23,4,0,6,14],[3,9,12,13,15],[5,8,10,11,54]];
-
 (function () {
   var nombres = {};
   EQUIPOS.forEach(function (e) { nombres[e.id] = e; });
@@ -688,20 +684,16 @@ const JORNADAS = [[52,51,50,49,36],[48,47,46,37,32],[45,44,43,42,41],[40,39,38,2
 
   function pintar() {
     var equipo = selEquipo.value;
-    var jornadaElegida = selEstado.value;
-    var html = "";
-
-    JORNADAS.forEach(function (indices, idx) {
-      var numero = idx + 1;
-      if (jornadaElegida !== "todas" && Number(jornadaElegida) !== numero) return;
-      var partidos = indices
-        .map(function (i) { return PARTIDOS[i]; })
-        .filter(function (p) { return !equipo || p.local === equipo || p.visitante === equipo; });
-      if (!partidos.length) return;
-      html += '<h3 class="jornada">Jornada ' + numero + "</h3>" + partidos.map(tarjeta).join("");
+    var estado = selEstado.value;
+    var filtrados = PARTIDOS.filter(function (p) {
+      if (equipo && p.local !== equipo && p.visitante !== equipo) return false;
+      if (estado === "finalizados" && !p.finalizado) return false;
+      if (estado === "pendientes" && p.finalizado) return false;
+      return true;
     });
-
-    lista.innerHTML = html || '<p class="vacio">No hay partidos con estos filtros.</p>';
+    lista.innerHTML = filtrados.length
+      ? filtrados.map(tarjeta).join("")
+      : '<p class="vacio">No hay partidos con estos filtros.</p>';
   }
 
   selEquipo.addEventListener("change", pintar);
