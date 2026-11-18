@@ -1018,3 +1018,10 @@ main,
 .productos .producto img[src$="Corto2.jpg"] {
   scale: 0.82;
 }
+
+/* ===== Fondo realmente blanco en las fotos con fondo gris =====
+   Camiseta1 tiene el fondo en RGB 241 y Corto2 en 247; con brightness se llevan a blanco */
+img[src$="Camiseta1.jpg.jpeg"],
+img[src$="Corto2.jpg"] {
+  filter: brightness(1.06);
+}
