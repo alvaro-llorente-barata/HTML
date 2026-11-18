@@ -1244,6 +1244,14 @@ img[src$="Corto2.jpg"] {
   color: #6b7385;
 }
 
+.jornada {
+  margin: 6px 0 0;
+  font-size: 0.85rem;
+  color: var(--azul);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
 /* Pantallas anchas: clasificación a la izquierda, partidos a la derecha, contenido en el centro */
 @media (min-width: 1880px) {
   body {
