@@ -1015,3 +1015,103 @@ img[src$="Camiseta1.jpg.jpeg"],
 img[src$="Corto2.jpg"] {
   filter: brightness(1.06);
 }
+
+/* ===== Laterales: clasificación y partidos ===== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.laterales {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto 40px;
+  padding: 0 22px;
+}
+
+.laterales .panel {
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--sombra);
+  padding: 20px;
+}
+
+.laterales h2 {
+  font-size: 1.3rem;
+  color: var(--azul);
+  margin: 0 0 4px;
+}
+
+.panel-sub {
+  margin: 0 0 12px;
+  font-size: 0.85rem;
+  color: #4a566b;
+}
+
+.laterales table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.laterales th,
+.laterales td {
+  padding: 6px 4px;
+  text-align: left;
+  border-bottom: 1px solid #e6e6e0;
+}
+
+.laterales th {
+  color: var(--azul);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.laterales td:nth-child(n+3),
+.laterales th:nth-child(n+3) {
+  text-align: center;
+}
+
+.laterales .destacado td {
+  background: var(--crema);
+  font-weight: bold;
+}
+
+/* Pantallas anchas: los paneles pasan a la derecha, fijos */
+@media (min-width: 1500px) {
+  main,
+  .coleccion {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: 360px;
+  }
+
+  .laterales {
+    position: fixed;
+    top: 110px;
+    right: 16px;
+    left: auto;
+    width: 330px;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    max-height: calc(100vh - 130px);
+    overflow-y: auto;
+    z-index: 5;
+  }
+}
+
+@media (max-width: 700px) {
+  .laterales th:nth-child(n+3),
+  .laterales td:nth-child(n+3) {
+    font-size: 0.8rem;
+  }
+}
