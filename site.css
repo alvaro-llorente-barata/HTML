@@ -1008,3 +1008,10 @@ main,
 }
 
 
+
+/* ===== Fondo blanco real en las fotos con fondo gris (sin cambiar el tamaño) =====
+   Camiseta1 tiene el fondo en RGB 241 y Corto2 en 247; brightness lo lleva a blanco */
+img[src$="Camiseta1.jpg.jpeg"],
+img[src$="Corto2.jpg"] {
+  filter: brightness(1.06);
+}
