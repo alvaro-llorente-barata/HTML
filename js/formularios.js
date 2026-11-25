@@ -32,6 +32,14 @@
         form.classList.add("was-validated");
         return;
       }
+      if (form.dataset.sesion === "iniciar" && window.Sesion) {
+        var correo = form.querySelector('input[type="email"]').value.trim();
+        var nombre = correo.split("@")[0].replace(/[._-]+/g, " ").replace(/\b\w/g, function (letra) {
+          return letra.toUpperCase();
+        });
+        window.Sesion.guardar({ nombre: nombre, email: correo });
+        window.Sesion.actualizar();
+      }
       mostrarAviso(form.dataset.avisoTitulo || "Aviso", form.dataset.aviso);
       form.reset();
       form.classList.remove("was-validated");
