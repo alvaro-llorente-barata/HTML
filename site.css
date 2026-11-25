@@ -13074,7 +13074,32 @@ footer a:hover {
   background: #fff;
 }
 
-.pago-total {
+.pago-totales {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+}
+
+.pago-totales li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e6e6e0;
+  background: transparent;
+  color: var(--azul);
+}
+
+.pago-envio-gratis {
+  font-weight: bold;
+  color: var(--verde);
+}
+
+.pago-totales .pago-total {
+  margin-top: 4px;
+  padding-top: 14px;
+  border-top: 2px solid var(--azul);
+  border-bottom: 0;
   font-size: 1.2rem;
   font-weight: bold;
   color: var(--verde);
